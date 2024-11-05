@@ -1,13 +1,11 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-router.get('/grid', (req, res) => {
+router.get('/', (req, res) => {
   let query = req.query;
-  console.log(`rows: ${query.rows}`);
-  console.log(`cols: ${query.cols}`);
-  
-  // Pass the query to the Pug template
-  res.render('grid', { title: "Make a grid", query: query });
+  console.log(`rows ${query.rows}`);
+  console.log(`cols ${query.cols}`);
+  res.render('grid', { title: "Grid Display", query: query });
 });
 
 module.exports = router;

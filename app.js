@@ -7,7 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const artifactsRouter = require('./routes/artifacts');
-const gridRouter = require('./grid');
+const gridRouter = require('./grid'); // Adjust the path accordingly
+
 
 
 
@@ -22,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/grid', gridRouter);
+app.use('/', gridRouter);
 
 app.use('/artifacts', artifactsRouter);
 
