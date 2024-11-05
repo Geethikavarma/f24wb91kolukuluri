@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title A random item
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+  body
+    h1 A Random Item Display
+    .container
+      each image, index in image_names
+        - let rand = Math.floor(Math.random() * 5)
+        img(src=`/images/${image_names[rand]}`, alt=`Item ${rand}`, height="300", width="300")
