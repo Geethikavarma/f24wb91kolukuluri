@@ -9,7 +9,7 @@ html
     .container-fluid
       .row
         //- Step 1: Define the array in unbuffered server-side code
-        - 
+        -
           const results = [
             { artifact_name: 'Ancient Vase', artifact_age: 1200, origin_culture: 'Greek' },
             { artifact_name: 'Stone Tablet', artifact_age: 3500, origin_culture: 'Egyptian' },
@@ -22,7 +22,7 @@ html
             h2 #{item.artifact_name}
             p Age: #{item.artifact_age} years
             p Origin: #{item.origin_culture}
-            button(class="buy-btn" data-index="#{index}" data-name="#{item.artifact_name}") Buy
+            button(class="buy-btn" data-index=index data-name=item.artifact_name) Buy
 
     // Add a script to bind events for the buy buttons
     script.
